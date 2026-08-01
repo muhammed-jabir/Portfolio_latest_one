@@ -26,6 +26,8 @@ Jabir.dev
 
 <a href="#contact">Contact</a>
 
+<a href="#education">Education</a>
+
 
 </div>
 
