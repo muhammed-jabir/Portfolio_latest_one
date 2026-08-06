@@ -36,20 +36,16 @@ function About() {
       >
         <span className="eyebrow">Introduction</span>
         <h2 className="title">About Me</h2>
+<p className="about-text">
+  I'm an <strong>Odoo Developer</strong> and <strong>Full Stack Web Developer</strong> passionate about creating efficient business solutions and modern, high-performance web applications.
+  <br />
+  <br />
+  I specialize in developing and customizing <strong>Odoo ERP</strong> modules using Python, PostgreSQL, XML, JavaScript, and the Odoo framework to streamline business processes and deliver scalable enterprise solutions.
+  <br />
+  <br />
+  Beyond ERP development, I build responsive, user-focused web applications with <strong>Django, React.js, REST APIs, HTML, CSS, and JavaScript</strong>, combining clean design with robust backend architecture to create seamless digital experiences.
+</p>
 
-        <p className="about-text">
-          I'm a Junior Odoo Developer and Full Stack Developer passionate
-          about building scalable business applications and modern web
-          solutions.
-          <br />
-          <br />
-          Currently working with Odoo ERP, Python, PostgreSQL, XML,
-          JavaScript and developing customized business modules.
-          <br />
-          <br />
-          I also have experience building full-stack applications using
-          Django, React.js and REST APIs.
-        </p>
 
         <div className="info-cards">
           {cards.map((card, index) => (
