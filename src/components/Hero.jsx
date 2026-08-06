@@ -1,56 +1,52 @@
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import { FaDownload, FaArrowRight } from "react-icons/fa";
 
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+};
 
-function Hero(){
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
-return(
+function Hero() {
+  return (
+    <section className="hero">
+      <motion.div variants={container} initial="hidden" animate="show">
+        <motion.span className="hero-tag" variants={item}>
+          Available for opportunities
+        </motion.span>
 
-<section className="hero">
+        <motion.h1 variants={item}>
+          Hi, I'm <span>Muhammed Jabir M T</span>
+        </motion.h1>
 
+        <motion.h2 variants={item}>Junior Odoo Developer</motion.h2>
 
-<motion.div
+        <motion.p variants={item}>
+          I build ERP solutions and modern web applications using Python,
+          Odoo, React and Django.
+        </motion.p>
 
-initial={{opacity:0,x:-50}}
+        <motion.div className="hero-actions" variants={item}>
+          <a href="/resume.pdf" download>
+            <button>
+              <FaDownload style={{ marginRight: 8 }} />
+              Download Resume
+            </button>
+          </a>
 
-animate={{opacity:1,x:0}}
-
->
-
-<h1>
-
-Hi, I'm <span>Muhammed Jabir M T</span>
-
-</h1>
-
-
-<h2>
-Junior Odoo Developer
-</h2>
-
-
-<p>
-
-I build ERP solutions and modern web applications
-using Python, Odoo, React and Django.
-
-</p>
-
-
-<br/>
-
-
-<button>
-Download Resume
-</button>
-
-
-</motion.div>
-
-
-</section>
-
-)
-
+          <a href="#projects" className="btn-outline">
+            View Work <FaArrowRight style={{ marginLeft: 6 }} />
+          </a>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
 
 export default Hero;
