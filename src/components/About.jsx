@@ -16,8 +16,9 @@ const cards = [
   {
     icon: <FaBriefcase />,
     title: "Experience",
-    text: "Junior Odoo Developer",
+    text: "Junior Odoo Developer & Full Stack Developer",
   },
+
   {
     icon: <FaRocket />,
     title: "Focus",

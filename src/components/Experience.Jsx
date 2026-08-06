@@ -4,7 +4,7 @@ const experience = [
   {
     year: "2026 - Present",
     role: "Junior Odoo Developer",
-    company: "Your Company Name",
+    company: "Emdot Mincetech",
     points: [
       "Develop and customize Odoo ERP modules",
       "Create models, views, menus and business workflows",
