@@ -18,31 +18,31 @@ function Hero() {
     <section className="hero">
       <motion.div variants={container} initial="hidden" animate="show">
         <motion.span className="hero-tag" variants={item}>
-          Available for opportunities
+          Available for freelance works
         </motion.span>
 
         <motion.h1 variants={item}>
           Hi, I'm <span>Muhammed Jabir M T</span>
         </motion.h1>
 
-        <motion.h2 variants={item}>Junior Odoo Developer</motion.h2>
+        <motion.h2 variants={item}>Odoo Developer & Web Developer</motion.h2>
 
         <motion.p variants={item}>
-          I build ERP solutions and modern web applications using Python,
-          Odoo, React and Django.
+         I design and develop scalable ERP solutions and modern web applications, delivering custom Odoo modules, business process automation, and responsive full-stack web solutions using Python, Odoo, Django, React.js, PostgreSQL, and JavaScript.
+
         </motion.p>
 
         <motion.div className="hero-actions" variants={item}>
-          <a href="/resume.pdf" download>
-            <button>
-              <FaDownload style={{ marginRight: 8 }} />
-              Download Resume
-            </button>
-          </a>
+ <a href="#projects">
+  <button>
+    Explore My Work
+    <FaArrowRight style={{ marginLeft: 8 }} />
+  </button>
+</a>
 
-          <a href="#projects" className="btn-outline">
-            View Work <FaArrowRight style={{ marginLeft: 6 }} />
-          </a>
+<a href="#contact" className="btn-outline">
+  Let's Connect
+</a>
         </motion.div>
       </motion.div>
     </section>
