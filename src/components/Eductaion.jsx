@@ -73,43 +73,6 @@ Computer Science | Software Development
 
 </div>
 
-
-
-<div className="resume-box">
-
-
-<h3>
-Interested in working together?
-</h3>
-
-
-<p>
-Download my resume to know more about my skills,
-experience and projects.
-</p>
-
-
-
-<a 
-href="/resume.pdf"
-download
-className="resume-btn"
->
-
-
-<FaDownload/>
-
-Download Resume
-
-
-</a>
-
-
-
-</div>
-
-
-
 </motion.div>
 
 

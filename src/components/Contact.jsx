@@ -23,15 +23,15 @@ function Contact() {
             </p>
 
             <div className="social-links">
-              <a href="mailto:yourmail@gmail.com">
+              <a href="mailto:jabirmtmuhammed@gmail.com">
                 <FaEnvelope /> Email
               </a>
 
-              <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/muhammed-jabir-mt/" target="_blank" rel="noreferrer">
                 <FaLinkedin /> LinkedIn
               </a>
 
-              <a href="https://github.com/your-github" target="_blank" rel="noreferrer">
+              <a href="https://github.com/muhammed-jabir" target="_blank" rel="noreferrer">
                 <FaGithub /> GitHub
               </a>
             </div>

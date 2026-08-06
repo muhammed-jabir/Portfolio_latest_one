@@ -18,7 +18,7 @@ const projects = [
       "Department and doctor-wise reporting dashboards",
       "Email integration for booking confirmations and reminders",
     ],
-    github: "#",
+    github: "https://github.com/muhammed-jabir/hospital_management_odoo",
   },
   {
     tag: "FULL STACK / E-COMMERCE",
@@ -35,7 +35,7 @@ const projects = [
       "Stripe integration for online payments",
       "Admin panel for product and inventory management",
     ],
-    github: "#",
+    github: "https://github.com/muhammed-jabir/Furniture_Shop",
   },
   {
     tag: "COMPUTER VISION / AR",

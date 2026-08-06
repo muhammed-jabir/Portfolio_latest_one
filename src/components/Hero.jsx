@@ -15,7 +15,7 @@ const item = {
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <motion.div variants={container} initial="hidden" animate="show">
         <motion.span className="hero-tag" variants={item}>
           Available for freelance works

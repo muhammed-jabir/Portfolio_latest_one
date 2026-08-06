@@ -107,6 +107,135 @@ button:hover{
   transform:translateY(-2px);
 }
 
+/* ============ Dock Nav ============ */
+.dock-nav{
+  position:fixed;
+  bottom:26px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:6px;
+  background:rgba(26,22,32,0.85);
+  border:1px solid var(--panel-border);
+  backdrop-filter:blur(14px);
+  padding:8px;
+  border-radius:40px;
+  z-index:1000;
+  box-shadow:0 20px 40px -20px rgba(0,0,0,0.6);
+}
+
+.dock-item{
+  position:relative;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-muted);
+  font-size:16px;
+  transition:.25s ease;
+}
+
+.dock-item:hover{
+  background:var(--bg-alt);
+  color:var(--text);
+  transform:translateY(-4px);
+}
+
+.dock-item.active{
+  background:var(--amber);
+  color:#1A1204;
+}
+
+.dock-tooltip{
+  position:absolute;
+  bottom:120%;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--bg-alt);
+  border:1px solid var(--panel-border);
+  padding:5px 10px;
+  border-radius:8px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:.2s;
+}
+
+.dock-item:hover .dock-tooltip{
+  opacity:1;
+}
+
+/* ============ Loader ============ */
+.loader{
+  position:fixed;
+  inset:0;
+  background:var(--bg);
+  z-index:9999;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:60px 8%;
+}
+
+.loader-top{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.loader-dots{
+  display:flex;
+  gap:10px;
+}
+
+.loader-dot{
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:var(--panel-border);
+  transition:.3s ease;
+}
+
+.loader-dot.active{
+  background:var(--amber);
+  box-shadow:0 0 12px rgba(232,168,85,0.6);
+}
+
+.loader-message{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+}
+
+.loader-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+
+.loader-percent{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:130px;
+  line-height:1;
+  letter-spacing:-0.02em;
+  color:var(--text);
+}
+
+.loader-tag{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--amber);
+}
+
 /* ============ Navbar ============ */
 .navbar{
   position:fixed;
@@ -900,6 +1029,30 @@ button:hover{
   }
 
   .project-index{
+    display:none;
+  }
+
+  .loader{
+    padding:40px 6%;
+  }
+
+  .loader-percent{
+    font-size:64px;
+  }
+
+  .dock-nav{
+    bottom:16px;
+    gap:2px;
+    padding:6px;
+  }
+
+  .dock-item{
+    width:36px;
+    height:36px;
+    font-size:14px;
+  }
+
+  .dock-tooltip{
     display:none;
   }
 

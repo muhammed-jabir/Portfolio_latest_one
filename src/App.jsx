@@ -1,34 +1,38 @@
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import Education from "./components/Eductaion";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import DockNav from "./components/Docknav";
 
 function App() {
+  const [loading, setLoading] = useState(true);
 
   return (
     <>
-      <Navbar />
+      <AnimatePresence mode="wait">
+        {loading && <Loader key="loader" onComplete={() => setLoading(false)} />}
+      </AnimatePresence>
 
-      <Hero />
-
-       <About />
-
-      <Skills />
-
-      <Experience />
-
-      <Projects />
-
-      <Education />
-
-      <Contact />
-
-      <Footer />
+      {!loading && (
+        <>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Contact />
+          <Footer />
+          <DockNav/>
+        </>
+      )}
     </>
   );
 }
