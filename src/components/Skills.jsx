@@ -1,19 +1,24 @@
 import { motion } from "framer-motion";
 
-import { FaPython, FaReact, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaPython, FaReact, FaGitAlt, FaHtml5, FaCss3Alt,FaCode } from "react-icons/fa";
 
-import { SiDjango, SiPostgresql, SiOdoo, SiJavascript } from "react-icons/si";
+import { SiDjango, SiPostgresql, SiOdoo, SiJavascript,SiBootstrap } from "react-icons/si";
 
 const skills = [
   { name: "Python", icon: <FaPython /> },
   { name: "Odoo ERP", icon: <SiOdoo /> },
   { name: "Django", icon: <SiDjango /> },
-  { name: "React", icon: <FaReact /> },
+  { name: "React.js", icon: <FaReact /> },
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "PostgreSQL", icon: <SiPostgresql /> },
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3Alt /> },
-  { name: "Git", icon: <FaGitAlt /> },
+  { name: "HTML5", icon: <FaHtml5 /> },
+  { name: "CSS3", icon: <FaCss3Alt /> },
+  { name: "Git & GitHub", icon: <FaGitAlt /> },
+  {name:"REST API",icon:<FaCode/>},
+{ name: "XML / QWeb", icon: <FaCode /> },
+ { name: "Bootstrap", icon: <SiBootstrap /> },
+
+
 ];
 
 function Skills() {
