@@ -18,9 +18,8 @@ function Contact() {
             <h3>Let's Build Something Together</h3>
 
             <p>
-              I'm open to software development opportunities, collaboration
-              and interesting projects.
-            </p>
+  I'm open to opportunities as a Python Developer, Odoo ERP Developer, and Full Stack Web Developer, as well as freelance projects, software development collaborations, and building scalable web applications and enterprise solutions.
+</p>
 
             <div className="social-links">
               <a href="mailto:jabirmtmuhammed@gmail.com">

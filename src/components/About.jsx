@@ -38,13 +38,16 @@ function About() {
         <span className="eyebrow">Introduction</span>
         <h2 className="title">About Me</h2>
 <p className="about-text">
-  I'm an <strong>Odoo Developer</strong> and <strong>Full Stack Web Developer</strong> passionate about creating efficient business solutions and modern, high-performance web applications.
+  I'm a <strong>Python Developer</strong>, <strong>Odoo ERP Developer</strong>, and <strong>Full Stack Web Developer</strong> specializing in building scalable ERP solutions, business applications, and modern web applications that improve efficiency and user experience.
   <br />
   <br />
-  I specialize in developing and customizing <strong>Odoo ERP</strong> modules using Python, PostgreSQL, XML, JavaScript, and the Odoo framework to streamline business processes and deliver scalable enterprise solutions.
+  My expertise includes developing, customizing, and integrating <strong>Odoo ERP</strong> modules using <strong>Python, PostgreSQL, XML/QWeb, JavaScript, REST APIs, and the Odoo Framework</strong>. I create secure, maintainable, and enterprise-ready solutions that automate workflows and support business growth.
   <br />
   <br />
-  Beyond ERP development, I build responsive, user-focused web applications with <strong>Django, React.js, REST APIs, HTML, CSS, and JavaScript</strong>, combining clean design with robust backend architecture to create seamless digital experiences.
+  I also develop responsive and high-performance web applications using <strong>Django, React.js, JavaScript, HTML5, CSS3, PostgreSQL, Git, and REST APIs</strong>, focusing on clean architecture, intuitive user interfaces, API integration, and scalable backend development.
+  <br />
+  <br />
+  Passionate about continuous learning, I enjoy solving real-world business challenges through modern software development, ERP customization, and full stack web technologies while following industry best practices and writing clean, maintainable code.
 </p>
 
 

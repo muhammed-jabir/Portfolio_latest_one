@@ -7,66 +7,124 @@ const projects = [
     tag: "ERP / HEALTHCARE",
     title: "Hospital Management System",
     shortDescription:
-      "Custom Odoo ERP hospital solution with appointment booking, doctor management and reporting.",
-    tags: ["Odoo 16", "Python", "PostgreSQL", "XML"],
+      "Custom Odoo ERP Hospital Management System with appointment scheduling, patient management, role-based access control, reporting, and workflow automation.",
+
+    tags: ["Odoo 16", "Python", "PostgreSQL", "XML/QWeb"],
+
     fullDescription:
-      "A custom Odoo ERP module built for hospital operations — covering patient registration, doctor scheduling, appointment booking and department-wise reporting. Implements role-based access for admins, doctors and receptionists, custom views and workflows on top of Odoo's ORM, and automated email notifications for appointment confirmations.",
-    techStack: ["Odoo 16", "Python", "PostgreSQL", "XML", "QWeb"],
-    highlights: [
-      "Role-based access control across admin, doctor and reception roles",
-      "Custom appointment workflow with automated status transitions",
-      "Department and doctor-wise reporting dashboards",
-      "Email integration for booking confirmations and reminders",
+      "Developed a custom Hospital Management System using Odoo 16 to digitize hospital operations. Built modules for patient registration, doctor management, appointment scheduling, department management, reporting, and automated notifications. Implemented role-based access control, custom business workflows, ORM models, XML/QWeb views, and email automation to improve operational efficiency.",
+
+    techStack: [
+      "Odoo 16",
+      "Python",
+      "PostgreSQL",
+      "XML/QWeb",
+      "JavaScript",
+      "REST API",
     ],
+
+    highlights: [
+      "Developed custom Odoo ERP modules using Python and the Odoo ORM",
+      "Implemented role-based access control (RBAC) for Admin, Doctor, Department Manager, and Patient",
+      "Built appointment scheduling, workflow automation, and email notifications",
+      "Created custom XML/QWeb views, reports, dashboards, and business workflows",
+      "Integrated REST APIs and optimized PostgreSQL database performance",
+    ],
+
     github: "https://github.com/muhammed-jabir/hospital_management_odoo",
   },
+
   {
     tag: "FULL STACK / E-COMMERCE",
     title: "Furniture E-Commerce Platform",
+
     shortDescription:
-      "Full-stack ecommerce application with authentication, cart, orders and online payments.",
-    tags: ["Django", "React", "JWT", "Stripe"],
+      "Full-stack e-commerce platform with secure authentication, shopping cart, online payments, and inventory management.",
+
+    tags: ["Django", "React", "DRF", "JWT"],
+
     fullDescription:
-      "A full-stack ecommerce platform for a furniture catalog, with a Django REST backend and a React frontend. Handles user authentication with JWT, product browsing and filtering, a persistent cart, order lifecycle management and Stripe-based checkout, with an admin panel for inventory control.",
-    techStack: ["Django", "Django REST Framework", "React", "JWT", "Stripe"],
-    highlights: [
-      "JWT-based authentication with protected routes",
-      "Cart and order lifecycle with backend validation",
-      "Stripe integration for online payments",
-      "Admin panel for product and inventory management",
+      "Built a scalable full-stack e-commerce application using Django REST Framework and React.js. Features include JWT authentication, product management, shopping cart, order processing, Stripe payment integration, REST APIs, and an admin dashboard for inventory and order management.",
+
+    techStack: [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "React.js",
+      "PostgreSQL",
+      "JWT",
+      "Stripe",
+      "REST API",
     ],
+
+    highlights: [
+      "Developed secure REST APIs using Django REST Framework",
+      "Implemented JWT authentication and protected user routes",
+      "Integrated Stripe payment gateway for secure online payments",
+      "Built responsive React.js frontend with API integration",
+      "Designed database models for products, orders, users, and inventory",
+    ],
+
     github: "https://github.com/muhammed-jabir/Furniture_Shop",
   },
+
   {
-    tag: "COMPUTER VISION / AR",
+    tag: "COMPUTER VISION / AUGMENTED REALITY",
     title: "AR Plant Implementation",
+
     shortDescription:
-      "Augmented Reality gardening app for interactive plant visualization.",
+      "Augmented Reality web application for interactive plant visualization using React, AR.js, Python, and OpenCV.",
+
     tags: ["React", "Python", "OpenCV", "AR.js"],
+
     fullDescription:
-      "An Augmented Reality gardening application that lets users visualize plants in their own space before placing an order. Combines a React frontend with AR.js for marker-based rendering, and a Python/OpenCV service for image processing and plant recognition.",
-    techStack: ["React", "AR.js", "Python", "OpenCV"],
-    highlights: [
-      "Marker-based AR rendering for real-time plant visualization",
-      "Python/OpenCV service for image processing",
-      "Interactive 3D placement in the user's physical space",
+      "Developed an Augmented Reality application that enables users to visualize plants in real-world environments before purchase. Combined React.js, AR.js, Python, and OpenCV to deliver marker-based AR experiences, image processing, and interactive 3D visualization.",
+
+    techStack: [
+      "React.js",
+      "Python",
+      "OpenCV",
+      "AR.js",
+      "JavaScript",
     ],
+
+    highlights: [
+      "Built marker-based Augmented Reality experiences using AR.js",
+      "Integrated Python and OpenCV for image processing",
+      "Implemented responsive React.js user interface",
+      "Created interactive 3D visualization for better user engagement",
+    ],
+
     github: "#",
   },
+
   {
-    tag: "FRONTEND / API",
+    tag: "FRONTEND / REST API",
     title: "Weather Dashboard",
+
     shortDescription:
-      "Responsive weather application displaying real-time weather information.",
-    tags: ["React", "API", "JavaScript"],
+      "Responsive weather application with real-time forecasts, REST API integration, and location-based search.",
+
+    tags: ["React", "REST API", "JavaScript"],
+
     fullDescription:
-      "A responsive weather dashboard that fetches real-time conditions and forecasts from a public weather API, with location search, unit toggling and a clean data visualization of upcoming days.",
-    techStack: ["React", "JavaScript", "REST API"],
-    highlights: [
-      "Live weather data via public API integration",
-      "Location search with error handling for invalid queries",
-      "Fully responsive layout across breakpoints",
+      "Developed a responsive weather dashboard using React.js and REST APIs to display real-time weather information, multi-day forecasts, location search, temperature unit conversion, and dynamic weather updates with an intuitive user interface.",
+
+    techStack: [
+      "React.js",
+      "JavaScript",
+      "REST API",
+      "HTML5",
+      "CSS3",
     ],
+
+    highlights: [
+      "Integrated public REST APIs for live weather information",
+      "Implemented location search and dynamic weather updates",
+      "Built responsive UI compatible with desktop and mobile devices",
+      "Handled API errors, loading states, and user-friendly interactions",
+    ],
+
     github: "#",
   },
 ];

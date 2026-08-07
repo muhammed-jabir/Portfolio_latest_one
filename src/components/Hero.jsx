@@ -69,19 +69,21 @@ function Hero() {
           <motion.span className="hero-tag" variants={item}>
             Available for freelance works
           </motion.span>
+<motion.h1 variants={item}>
+  Hi, I'm <span>Muhammed Jabir M T</span>
+</motion.h1>
 
-          <motion.h1 variants={item}>
-            Hi, I'm <span>Muhammed Jabir M T</span>
-          </motion.h1>
+<motion.h2 variants={item}>
+  Python Developer | Odoo ERP Developer | Full Stack Web Developer
+</motion.h2>
 
-          <motion.h2 variants={item}>Odoo Developer &amp; Web Developer</motion.h2>
-
-          <motion.p variants={item}>
-            I design and develop scalable ERP solutions and modern web
-            applications, delivering custom Odoo modules, business process
-            automation, and responsive full-stack web solutions using Python,
-            Odoo, Django, React.js, PostgreSQL, and JavaScript.
-          </motion.p>
+<motion.p variants={item}>
+  I build scalable ERP systems and modern web applications using Python,
+  Odoo ERP, Django, React.js, PostgreSQL, JavaScript, REST APIs, XML/QWeb,
+  HTML, and CSS. I specialize in Odoo customization, business process
+  automation, API integration, and responsive full-stack development to
+  deliver secure, high-performance software solutions.
+</motion.p>
 
           <motion.div className="hero-actions" variants={item}>
             <a href="#contact" className="btn-outline">
