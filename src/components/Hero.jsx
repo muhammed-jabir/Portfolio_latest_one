@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
-import profileImg from "../assets/profile4.jpeg";
+import profileImg from "../assets/catnew.jpeg";
 
 const container = {
   hidden: {},

@@ -146,22 +146,36 @@ button:hover{
   box-shadow:0 20px 40px -20px rgba(0,0,0,0.6);
 }
 
-.dock-item{
-  position:relative;
-  flex:1;
-  min-width:0;
-  max-width:44px;
-  aspect-ratio:1/1;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:rgba(241,236,234,0.6);
-  font-size:clamp(13px, 3.6vw, 16px);
-  border:none;
-  background:transparent;
-  cursor:pointer;
-  transition:.25s ease;
+.dock-item {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(241, 236, 234, 0.6);
+
+    font-size: 16px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+
+    transform-origin: 50% 120%;
+
+    will-change: transform;
 }
 
 .dock-item:hover{
@@ -1422,6 +1436,9 @@ button:hover{
 
   .info-cards{
     flex-direction:column;
+  }
+  .dock-item:hover{
+    transform: none;
   }
 
   .card{
