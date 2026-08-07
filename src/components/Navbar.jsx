@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const links = [
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
@@ -31,19 +32,13 @@ function Navbar() {
         Jabir<span>.dev</span>
       </h2>
 
-      <div className="nav-links">
-        {links.map((link) => (
-          <a key={link.href} href={link.href}>
-            {link.label}
-          </a>
-        ))}
-      </div>
-
       <button
-        className="mobile-toggle"
+        className="menu-trigger"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         aria-label="Toggle menu"
       >
+        <span className="menu-trigger-label">Menu</span>
         {open ? <FaTimes /> : <FaBars />}
       </button>
 

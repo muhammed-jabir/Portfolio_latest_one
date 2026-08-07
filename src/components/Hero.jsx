@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
+import profileImg from "../assets/profile4.jpeg";
 
 const container = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.12, delayChildren: 0.15 },
   },
 };
 
@@ -13,38 +14,101 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
+const sideLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+];
+
+const connectLinks = [
+  { label: "GitHub", href: "https://github.com/your-github" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/your-linkedin" },
+  { label: "Email", href: "mailto:yourmail@gmail.com" },
+];
+
 function Hero() {
   return (
     <section className="hero" id="home">
-      <motion.div variants={container} initial="hidden" animate="show">
-        <motion.span className="hero-tag" variants={item}>
-          Available for freelance works
-        </motion.span>
+      <div className="hero-bg-text" aria-hidden="true">
+        {"ODOO\nDEVELOPER"}
+      </div>
 
-        <motion.h1 variants={item}>
-          Hi, I'm <span>Muhammed Jabir M T</span>
-        </motion.h1>
+      <motion.nav
+        className="hero-side-nav"
+        aria-label="Section links"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <span className="hero-nav-label">Links / Menu</span>
+        {sideLinks.map((link) => (
+          <a key={link.href} href={link.href}>
+            {link.label}
+          </a>
+        ))}
+      </motion.nav>
 
-        <motion.h2 variants={item}>Odoo Developer & Web Developer</motion.h2>
+      <motion.nav
+        className="hero-connect-nav"
+        aria-label="Social links"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <span className="hero-nav-label">Connect / Social</span>
+        {connectLinks.map((link) => (
+          <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+            {link.label}
+          </a>
+        ))}
+      </motion.nav>
 
-        <motion.p variants={item}>
-         I design and develop scalable ERP solutions and modern web applications, delivering custom Odoo modules, business process automation, and responsive full-stack web solutions using Python, Odoo, Django, React.js, PostgreSQL, and JavaScript.
+      <div className="hero-inner">
+        <motion.div variants={container} initial="hidden" animate="show" className="hero-content">
+          <motion.span className="hero-tag" variants={item}>
+            Available for freelance works
+          </motion.span>
 
-        </motion.p>
+          <motion.h1 variants={item}>
+            Hi, I'm <span>Muhammed Jabir M T</span>
+          </motion.h1>
 
-        <motion.div className="hero-actions" variants={item}>
- <a href="#projects">
-  <button>
-    Explore My Work
-    <FaArrowRight style={{ marginLeft: 8 }} />
-  </button>
-</a>
+          <motion.h2 variants={item}>Odoo Developer &amp; Web Developer</motion.h2>
 
-<a href="#contact" className="btn-outline">
-  Let's Connect
-</a>
+          <motion.p variants={item}>
+            I design and develop scalable ERP solutions and modern web
+            applications, delivering custom Odoo modules, business process
+            automation, and responsive full-stack web solutions using Python,
+            Odoo, Django, React.js, PostgreSQL, and JavaScript.
+          </motion.p>
+
+          <motion.div className="hero-actions" variants={item}>
+            <a href="#contact" className="btn-outline">
+              Let's Connect <FaArrowRight style={ { marginLeft : 6 }} />
+             
+            </a>
+
+            <a href="#projects" className="btn-outline">
+              View Work <FaArrowRight style={{ marginLeft: 6 }} />
+            </a>
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+        <motion.div
+          className="hero-visual"
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.35 }}
+          aria-hidden="true"
+        >
+          <div className="hero-visual-grid" />
+          <div className="hero-visual-ring" />
+          <div className="hero-visual-core">
+            <img src={profileImg} alt="Muhammed Jabir M T" className="hero-visual-img" />
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }
