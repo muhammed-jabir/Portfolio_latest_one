@@ -679,56 +679,210 @@ button:hover{
 }
 
 /* ============ Skills — module launcher grid (signature) ============ */
-.skills-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:16px;
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills {
+    width: 100%;
+    position: relative;
 }
 
-.skill-card{
-  background:var(--panel);
-  padding:26px 20px;
-  border-radius:var(--radius-md);
-  text-align:center;
-  border:1px solid var(--panel-border);
-  transition:.25s ease;
-  position:relative;
-  overflow:hidden;
+
+/* =========================================================
+   SKILLS HEADER
+   Follows the same left alignment as the other sections
+========================================================= */
+
+.skills-header {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 44px;
+
+    text-align: left;
 }
 
-.skill-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(160deg, rgba(139,92,126,0.16), transparent 60%);
-  opacity:0;
-  transition:.25s ease;
+
+.skills-badge {
+    display: inline-block;
+
+    font-family: var(--font-mono);
+
+    font-size: 13px;
+
+    letter-spacing: 0.06em;
+
+    color: var(--amber);
+
+    border: 1px solid var(--panel-border);
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+}
+.skills-header h2 {
+    font-family: var(--font-display);
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.01em;
+
+    color: var(--text);
+
+    margin: 0 0 14px;
+
+    line-height: 1.2;
 }
 
-.skill-card:hover{
-  border-color:var(--accent);
-  transform:translateY(-4px);
+.skills-header p {
+    color: var(--text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    max-width: 560px;
 }
 
-.skill-card:hover::before{
-  opacity:1;
+
+/* =========================================================
+   GSAP STAGE
+========================================================= */
+.skills-stage {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 430px;
+
+    margin: 0 auto;
+
+    cursor: crosshair;
+
+    overflow: hidden;
 }
 
-.skill-icon{
-  font-size:32px;
-  color:var(--accent-bright);
-  margin-bottom:14px;
-  position:relative;
+
+/* =========================================================
+   SKILL AREA
+========================================================= */
+
+.skills-grid {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
 }
 
-.skill-card h3{
-  font-family:var(--font-mono);
-  font-size:13px;
-  font-weight:500;
-  color:var(--text-muted);
-  position:relative;
+
+/* =========================================================
+   SKILL ITEM
+========================================================= */
+
+.skill-card {
+    position: absolute;
+
+    left: var(--x);
+    top: var(--y);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--r, 0deg));
+
+    transform-origin: center center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100px;
+
+    padding: 8px;
+
+    background: transparent;
+
+    border: none;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    will-change: transform;
 }
 
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.skill-icon {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--accent-bright);
+
+    font-size: 34px;
+
+    flex-shrink: 0;
+}
+
+.skill-icon svg {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+}
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.skill-card h3 {
+    margin: 0;
+
+    font-family: var(--font-mono);
+
+    font-size: 12px;
+
+    line-height: 1.3;
+
+    font-weight: 500;
+
+    color: var(--text-muted);
+
+    text-align: center;
+
+    white-space: nowrap;
+}
 /* ============ Projects — case study rows + modal ============ */
 .projects-list{
   display:flex;
@@ -1286,6 +1440,142 @@ button:hover{
   .experience-card::before{
     left:-28px;
   }
+    .skills {
+        padding: 80px 6%;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    .skills-header {
+        margin-bottom: 36px;
+        text-align: left;
+    }
+
+    .skills-badge {
+        font-size: 10px;
+        padding: 6px 12px;
+        margin-bottom: 14px;
+    }
+
+    .skills-header h2 {
+        font-size: 36px;
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    .skills-header p {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+
+    /* ---------- MOBILE SKILL AREA ---------- */
+
+    .skills-stage {
+        width: 100%;
+        height: auto;
+        margin: 0;
+
+        cursor: default;
+
+        overflow: visible;
+    }
+
+
+    .skills-grid {
+        width: 100%;
+        height: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 34px 12px;
+
+        align-items: center;
+        justify-items: center;
+    }
+
+
+    /* ---------- SKILL ITEM ---------- */
+
+    .skill-card {
+        position: static;
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 0;
+
+        transform: none !important;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        background: transparent;
+
+        border: none;
+
+        pointer-events: none;
+
+        user-select: none;
+    }
+
+
+    /* ---------- ICON ---------- */
+
+    .skill-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 32px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        color: var(--accent-bright);
+    }
+
+    .skill-icon svg {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+    }
+
+
+    /* ---------- NAME ---------- */
+
+    .skill-card h3 {
+        margin: 0;
+
+        font-family: var(--font-mono);
+
+        font-size: 10px;
+
+        line-height: 1.3;
+
+        font-weight: 500;
+
+        color: var(--text-muted);
+
+        text-align: center;
+
+        white-space: nowrap;
+    }
+
+
 
   .project-index{
     display:none;
