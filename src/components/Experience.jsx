@@ -1,29 +1,29 @@
 import { motion } from "framer-motion";
 
 const experience = [
-  {
-    year: "2026 - Present",
-    role: "Junior Odoo Developer",
-    company: "Emdot Mincetech",
-    points: [
-      "Develop and customize Odoo ERP modules",
-      "Create models, views, menus and business workflows",
-      "Work with Python, PostgreSQL and XML",
-      "Customize reports and improve ERP functionality",
-      "Debug and maintain Odoo applications",
-    ],
-  },
-  {
-    year: "2025",
-    role: "Full Stack Developer Intern",
-    company: "InfoCampus",
-    points: [
-      "Developed web applications using Django and React",
-      "Built REST API based applications",
-      "Worked with database design and frontend integration",
-      "Improved debugging and problem-solving skills",
-    ],
-  },
+    {
+        year: "2026 - Present",
+        role: "Junior Odoo Developer",
+        company: "Emdot Mincetech",
+        points: [
+            "Develop and customize Odoo ERP modules",
+            "Create models, views, menus and business workflows",
+            "Work with Python, PostgreSQL and XML",
+            "Customize reports and improve ERP functionality",
+            "Debug and maintain Odoo applications",
+        ],
+    },
+    {
+        year: "2025",
+        role: "Full Stack Developer Intern",
+        company: "InfoCampus",
+        points: [
+            "Developed web applications using Django and React",
+            "Built REST API based applications",
+            "Worked with database design and frontend integration",
+            "Improved debugging and problem-solving skills",
+        ],
+    },
 ];
 
 function Experience() {
@@ -43,7 +43,7 @@ function Experience() {
                         viewport={{ once: true }}
                         transition={{
                             duration: 0.5,
-                            delay: index * 0.1
+                            delay: index * 0.1,
                         }}
                     >
                         <div className="year">
