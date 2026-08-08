@@ -167,6 +167,15 @@ function DockNav() {
     );
   };
 
+  const handleLinkClick = (e, id) => {
+  e.preventDefault();
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
   return (
     <div className="dock-wrapper">
       <motion.div
@@ -196,6 +205,7 @@ function DockNav() {
           <a
             key={item.id}
             href={`#${item.id}`}
+            onClick={(a) => handleLinkClick(a,item.id)}
             ref={(el) => {
               itemRefs.current[index] = el;
             }}

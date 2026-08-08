@@ -117,7 +117,7 @@ function Skills() {
   }, []);
 
   return (
-    <section className="skills" id="skills">
+    <section id="skills" className="skills">
       <div className="skills-header">
         <span className="eyebrow">
           Tech Stack

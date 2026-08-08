@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -27,6 +28,21 @@ function Navbar() {
         };
     }, []);
 
+    const handleLinkClick = (e, href) => {
+        e.preventDefault();
+
+        setOpen(false);
+
+        const target = document.querySelector(href);
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    };
+
     return (
         <motion.nav
             className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}
@@ -37,9 +53,23 @@ function Navbar() {
                 ease: "easeOut",
             }}
         >
-
+            {/* LOGO */}
             <h2>Jabir.dev</h2>
 
+            {/* DESKTOP NAVIGATION */}
+            <div className="desktop-nav">
+                {links.map((link) => (
+                    <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={(e) => handleLinkClick(e, link.href)}
+                    >
+                        {link.label}
+                    </a>
+                ))}
+            </div>
+
+            {/* MOBILE MENU BUTTON */}
             <button
                 className="menu-trigger"
                 onClick={() => setOpen(!open)}
@@ -53,6 +83,7 @@ function Navbar() {
                 {open ? <FaTimes /> : <FaBars />}
             </button>
 
+            {/* MOBILE DROPDOWN */}
             <AnimatePresence>
                 {open && (
                     <motion.div
@@ -77,7 +108,9 @@ function Navbar() {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                onClick={() => setOpen(false)}
+                                onClick={(e) =>
+                                    handleLinkClick(e, link.href)
+                                }
                             >
                                 {link.label}
                             </a>
@@ -85,7 +118,6 @@ function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-
         </motion.nav>
     );
 }
