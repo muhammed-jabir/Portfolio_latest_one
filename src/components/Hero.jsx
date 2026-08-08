@@ -70,7 +70,7 @@ function Hero() {
             Available for freelance works
           </motion.span>
 <motion.h1 variants={item}>
-  Hi, I'm <span>Muhammed Jabir M T</span>
+  Hi, I'm <span>Muhammed Jabir</span>
 </motion.h1>
 
 <motion.h2 variants={item}>
