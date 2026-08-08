@@ -27,35 +27,48 @@ const experience = [
 ];
 
 function Experience() {
-  return (
-    <section id="experience">
-      <span className="eyebrow">Career So Far</span>
-      <h2 className="title">Experience</h2>
+    return (
+        <section id="experience">
 
-      <div className="timeline">
-        {experience.map((item, index) => (
-          <motion.div
-            className="experience-card"
-            key={item.role}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <div className="year">{item.year}</div>
-            <h3>{item.role}</h3>
-            <h4>{item.company}</h4>
+            <h2 className="title">Experience</h2>
 
-            <ul>
-              {item.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
+            <div className="timeline">
+
+                {experience.map((item, index) => (
+                    <motion.div
+                        className="experience-card"
+                        key={item.role}
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.5,
+                            delay: index * 0.1
+                        }}
+                    >
+                        <div className="year">
+                            {item.year}
+                        </div>
+
+                        <h3>{item.role}</h3>
+
+                        <h4>{item.company}</h4>
+
+                        <ul>
+                            {item.points.map((point) => (
+                                <li key={point}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+
+                    </motion.div>
+                ))}
+
+            </div>
+
+        </section>
+    );
 }
 
 export default Experience;
