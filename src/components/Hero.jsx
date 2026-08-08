@@ -19,12 +19,13 @@ const sideLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Contact" , href: "#contact"},
 ];
 
 const connectLinks = [
-  { label: "GitHub", href: "https://github.com/your-github" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/your-linkedin" },
-  { label: "Email", href: "mailto:yourmail@gmail.com" },
+  { label: "GitHub", href: "https://github.com/muhammed-jabir" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammed-jabir-mt/" },
+  { label: "Email", href: "mailto:jabirmtmuhammed@gmail.com" },
 ];
 
 function Hero() {

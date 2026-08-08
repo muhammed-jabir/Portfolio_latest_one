@@ -1,13 +1,43 @@
+
+import { FaArrowUp } from "react-icons/fa";
+
 function Footer() {
-  return (
-    <footer className="footer">
-      <h3>Jabir.dev</h3>
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
-      <p>Odoo Developer | Python Developer | Full Stack Developer</p>
+    return (
+        <footer className="footer">
 
-      <p>© {new Date().getFullYear()} Muhammed Jabir M T. All rights reserved.</p>
-    </footer>
-  );
+            <div className="footer-content">
+
+                <h3>Jabir.dev</h3>
+
+                <p>
+                    Odoo Developer | Python Developer | Full Stack Developer
+                </p>
+
+                <p className="footer-copyright">
+                    © {new Date().getFullYear()} Muhammed Jabir M T.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                className="back-to-top"
+                onClick={scrollToTop}
+                aria-label="Back to top"
+            >
+                <FaArrowUp />
+            </button>
+
+        </footer>
+    );
 }
 
 export default Footer;
