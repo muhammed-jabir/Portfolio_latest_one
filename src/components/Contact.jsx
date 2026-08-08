@@ -45,7 +45,8 @@ function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-            >
+            >  
+            <span className="eyebrow">Contact</span>
 
                 <h2 className="title">
                     Get In Touch
