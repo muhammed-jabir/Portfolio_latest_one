@@ -29,35 +29,29 @@ function Navbar() {
     }, []);
 
 
+
 const handleLinkClick = (e, href) => {
     e.preventDefault();
 
-    const target = document.querySelector(href);
-
-    if (!target) {
-        console.log("Section not found:", href);
-        return;
-    }
-
-    // Close mobile menu first
+    // Close mobile menu
     setOpen(false);
 
-    // Wait for the menu state to update,
-    // then perform the scroll
+    // Wait until the dropdown starts closing
     setTimeout(() => {
-        const navbarHeight = 72;
+        const target = document.querySelector(href);
 
-        const targetPosition =
-            target.getBoundingClientRect().top +
-            window.scrollY -
-            navbarHeight;
+        if (!target) {
+            console.log("Target not found:", href);
+            return;
+        }
 
-        window.scrollTo({
-            top: targetPosition,
+        target.scrollIntoView({
             behavior: "smooth",
+            block: "start",
         });
-    }, 50);
+    }, 300);
 };
+
 
 
     return (

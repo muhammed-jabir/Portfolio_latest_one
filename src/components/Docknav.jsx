@@ -167,14 +167,30 @@ function DockNav() {
     );
   };
 
-  const handleLinkClick = (e, id) => {
-  e.preventDefault();
 
-  const target = document.getElementById(id);
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth" });
-  }
+const handleLinkClick = (e, id) => {
+    e.preventDefault();
+
+    const target = document.getElementById(id);
+
+    if (!target) {
+        console.log("Target not found:", id);
+        return;
+    }
+
+    const navbarHeight = 72;
+
+    const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        navbarHeight;
+
+    window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+    });
 };
+
 
   return (
     <div className="dock-wrapper">
